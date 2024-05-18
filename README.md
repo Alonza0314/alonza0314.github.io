@@ -16,6 +16,6 @@ This is the first website constructed by myself. I'm still working on making thi
 
 If you think its a not bad template, be free to use it! But please to make a reference to this github page. Thanks.
 
-### Additional
+## Additional
 
 Capoo is so cute!!
