@@ -9,7 +9,7 @@ This is the first website constructed by myself. I'm still working on making thi
 |Part|Link|
 |-|-|
 |FAVICON|[Stickers Cloud](https://stickers.cloud/)|
-|PHOTO|[ME](https://alonza0314.github.io)|
+|PHOTO|[Myself](https://alonza0314.github.io)|
 |UI-DESIGN|[UI VERSE](https://uiverse.io/)|
 
 ## Something BlaBla
