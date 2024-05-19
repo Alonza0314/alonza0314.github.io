@@ -125,6 +125,51 @@
     transform: translateX(100%);
 }
 
-@media only screen and (max-width: 600px) {
-    
+@media only screen and (max-width: 820px) {
+    .intro {
+        display: unset;
+        flex-direction: unset;
+        min-height: unset;
+        margin-top: -1%;
+        margin-bottom: 3%;
+    }
+
+    .intro .left-content {
+        /* background-color: lightblue; */
+        width: 45%;
+        float: left;
+    }
+
+    .intro .left-content img {
+        width: 70%;
+        margin-left: 15%;
+        margin-top: 15%;
+        box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    }
+
+    .intro .left-content img:hover {
+        width: 80;
+        transform: unset;
+    }
+
+    .intro .right-content {
+        /* background-color: lightblue; */
+        max-width: unset;
+        margin-top: 8%;
+        font-size: small;
+        padding: 0 5%;
+    }
+
+    .about {
+        /* background-color: darkblue; */
+        flex-direction: column;
+        align-items: center;
+        gap: unset;
+    }
+
+    .about .card {
+        height: 45vh;
+        margin: 2%;
+    }
+
 }
