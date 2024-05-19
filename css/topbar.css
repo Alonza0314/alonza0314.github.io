@@ -69,8 +69,11 @@ body, html {
     }
 
     .extra-text {
-        display: block;
+        /* background-color: rgb(27, 138, 235); */
         margin-bottom: 10px;
+        margin-left: unset;
+        display: flex;
+        justify-content: center;
     }
     
     .main {
