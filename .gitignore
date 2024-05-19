@@ -1,7 +1,5 @@
 # files do not want to push to github
 
-.gitignore
-
 autoPush.sh
 
 tmp.html
