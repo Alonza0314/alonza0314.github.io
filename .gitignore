@@ -1,3 +1,6 @@
+# files do not want to push to github
+
 autoPush.sh
+
 tmp.html
 tmp.css
