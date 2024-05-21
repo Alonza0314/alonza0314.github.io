@@ -41,6 +41,18 @@
     margin-left: -5%;
     padding-right: 10%;
 }
+.intro .right-content-en {
+    /* background-color: lightblue; */
+    max-width: 50vw;
+    width: auto;
+    margin-top: 6%;
+    color: rgb(0, 52, 92);
+    font-weight: bold;
+    font-size: medium;
+    margin-left: -5%;
+    padding-right: 10%;
+    display: none;
+}
 
 .about {
     /* background-color: darkblue; */
@@ -49,10 +61,19 @@
     flex-wrap: wrap;
     gap: 4.5%;
     justify-content: center;
-    margin-top: 1%;
+    margin-top: 3%;
+}
+.about-en {
+    /* background-color: darkblue; */
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4.5%;
+    justify-content: center;
+    margin-top: 3%;
 }
 
-.about .card {
+.card {
     background-color: #417ad0;
     background-image: linear-gradient(43deg, #417ad0 0%, #87a5d8 50%, #00e3ef83 100%);
     display: flex;
@@ -165,6 +186,15 @@
         font-size: small;
         padding: 0 5%;
     }
+    .intro .right-content-en {
+        /* background-color: lightblue; */
+        max-width: unset;
+        margin-top: 8%;
+        margin-left: unset;
+        font-size: small;
+        padding: 0 5%;
+        display: none;
+    }
 
     .about {
         /* background-color: darkblue; */
@@ -172,8 +202,15 @@
         align-items: center;
         gap: unset;
     }
+    .about-en {
+        /* background-color: darkblue; */
+        flex-direction: column;
+        align-items: center;
+        gap: unset;
+        display: none;
+    }
 
-    .about .card {
+    .card {
         height: 45vh;
         margin: 2%;
     }

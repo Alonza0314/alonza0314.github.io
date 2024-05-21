@@ -12,6 +12,7 @@
 
     <script src="./js/topbar.js"></script>
     <script src="./js/bottombar.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 <body>
     <div class="topbar">
@@ -22,13 +23,13 @@
             <a href="https://alonza0314.github.io">首頁</a>
             <a href="https://alonza0314.github.io/about.html">關於我</a>
             <a href="#">聯絡資訊</a>
-            <a href="#" onclick="topbarLanguage(); bottombarLanguage();">ZH / EN</a>
+            <a href="#" id="languageSwitcherZH">ZH / EN</a>
         </div>
         <div class="link-en" id="link-en">
             <a href="https://alonza0314.github.io">HOMEPAGE</a>
             <a href="https://alonza0314.github.io/about.html">ABOUT</a>
             <a href="#">CONTACT</a>
-            <a href="#" id="languageSwitcher">ZH / EN</a>
+            <a href="#" id="languageSwitcherEN">ZH / EN</a>
         </div>
     </div>
     <div class="main">
@@ -36,14 +37,20 @@
             <div class="left-content">
                 <img src="/img/alonza.jpg" alt="my-photo">
             </div>
-            <div class="right-content">
+            <div class="right-content" id="right-content">
                 <h1>杜峯 (Alonza)</h1>
-                <h2>身為碩零的新生，每天早上起來都會記得要先睜開眼睛，在上班與上進之間，我選擇上香，說不定哪一天走出校門的瞬間，會出現一群西裝黑衣人朝我跪下大喊：『少爺，約定之期已到，請您隨我們回去繼承老爺那千億上市集團。』</h2>
+                <h2>每天早上起來都會記得要先睜開眼睛，在上班與上進之間，我選擇上香，說不定哪一天走出校門的瞬間，會出現一群西裝黑衣人朝我跪下大喊：『少爺，約定之期已到，請您隨我們回去繼承老爺那千億上市集團。』</h2>
                 <h2>從此走上人生巔峰，不再為了晚餐要吃泡麵還是牛肉麵而發愁。</h2>
                 <h2>如果有某位管家發現我是您家流落在外的少爺，麻煩不要害羞，直接點擊右上角聯絡資訊聯絡我！</h2>
             </div>
+            <div class="right-content-en" id="right-content-en">
+                <h1>Du Feng (Alonza)</h1>
+                <h2>Every morning when I wake up, I remember to open my eyes first, and between going to work and going to school, I choose to go to incense. Perhaps one day, the moment I step out of the school gate, a group of men in black suits will kneel before me and shout: 'Young Master, the appointed time has come. Please come with us to inherit the billion-dollar company of your father.'</h2>
+                <h2>From then on, I would reach the pinnacle of life, no longer worrying about whether to eat instant noodles or beef noodles for dinner.</h2>
+                <h2>If any butler discovers that I am the long-lost young master of your family, please don't be shy. Just click on the contact information in the upper right corner to reach me!</h2>
+            </div>
         </div>
-        <div class="about">
+        <div class="about" id="about">
             <a class="card" href="#">
                 <div class="card-content">
                     <p class="card-title">求學經歷</p>
@@ -63,6 +70,27 @@
                 </div>
             </a>
         </div>
+        <div class="about-en" id="about-en">
+            <a class="card" href="#">
+                <div class="card-content">
+                    <p class="card-title">Educational Background</p>
+                    <p class="card-para">Click to view details</p>
+                </div>
+            </a>
+            <a class="card" href="#">
+                <div class="card-content">
+                    <p class="card-title">Achievements</p>
+                    <p class="card-para">Click to view details</p>
+                </div>
+            </a>
+            <a class="card" href="#">
+                <div class="card-content">
+                    <p class="card-title">Project Portfolio</p>
+                    <p class="card-para">Click to view details</p>
+                </div>
+            </a>
+        </div>
+        
         <footer class="bottombar">
             <div class="refe" id="refe">
                 <p class="reference">• 網頁圖標來源：
