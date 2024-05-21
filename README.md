@@ -17,6 +17,8 @@ This is the first website constructed by myself. I'm still working on making thi
 
 If you think its a not bad template, be free to use it! But please to make a reference to this github page. Thanks.
 
-## Additional
+## Versions Different
 
-Capoo is so cute!!
++ Large version: complete webpages and a comprehensive visual disign
++ Medium version: a complete page
++ Small version: a page with some improved
