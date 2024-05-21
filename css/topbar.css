@@ -62,9 +62,6 @@ body, html {
     .topbar {
         display: flex;
         flex-direction: column;
-        background-color: #2658c4;
-        color: white;
-        padding: 10px;
         text-align: center;
     }
 
