@@ -8,11 +8,14 @@ body, html {
     background-color: #2658c4;
     padding: 10px;
     text-align: right;
-    width: 100%;
 }
 
 .link {
     margin-right: 2%;
+}
+.link-en {
+    margin-right: 2%;
+    display: none;
 }
 
 .topbar a {
