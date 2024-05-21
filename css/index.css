@@ -82,13 +82,13 @@
 }
 
 .card .card-content .card-title {
-    font-size: 250%;
+    font-size: 5vh;
     font-weight: 600;
     color: inherit;
 }
 
 .card .card-content .card-para {
-    font-size: 100%;
+    font-size: 2vh;
     opacity: 0.8;
     color: inherit;
 }
@@ -174,8 +174,15 @@
     }
 
     .about .card {
-        height: 45vh;
+        height: 45vw;
         margin: 2%;
     }
 
+    .card .card-content .card-title {
+        font-size: 5vw;
+    }
+
+    .card .card-content .card-para {
+        font-size: 2vw;
+    }
 }
