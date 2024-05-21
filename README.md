@@ -19,7 +19,7 @@ If you think its a not bad template, be free to use it! But please to make a ref
 
 ## Versions Different
 
-+ Large version: complete webpages and a comprehensive visual disign
++ Large version: complete webpages and a comprehensive visual design
 + Medium version: a complete page
 + Small version: a page with some improved
 
@@ -38,6 +38,7 @@ graph LR;
     C --> CB[achievements];
     C --> CC[project portfolio];
 
-    D --> DA[github--embeded]
-    D --> DB[instagram--embeded]
+    D --> DA[reference--embeded]
+    D --> DB[github--embeded]
+    D --> DC[instagram--embeded]
 ```
