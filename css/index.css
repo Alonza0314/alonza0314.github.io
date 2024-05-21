@@ -174,15 +174,15 @@
     }
 
     .about .card {
-        height: 45vw;
+        height: 45vh;
         margin: 2%;
     }
 
     .card .card-content .card-title {
-        font-size: 5vw;
+        font-size: 5vh;
     }
 
     .card .card-content .card-para {
-        font-size: 2vw;
+        font-size: 2vh;
     }
 }

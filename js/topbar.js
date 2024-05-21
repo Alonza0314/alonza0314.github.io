@@ -1,12 +1,12 @@
-function changeLanguage() {
-    var chineselink = document.getElementById("link");
-    var englishlink = document.getElementById("link-en");
+function topbarLanguage() {
+    var link = document.getElementById("link");
+    var linken = document.getElementById("link-en");
     
-    if (chineselink.style.display === "none") {
-        chineselink.style.display = "unset";
-        englishlink.style.display = "none";
+    if (link.style.display === "none") {
+        link.style.display = "unset";
+        linken.style.display = "none";
     } else {
-        chineselink.style.display = "none";
-        englishlink.style.display = "unset";
+        link.style.display = "none";
+        linken.style.display = "unset";
     }
 }

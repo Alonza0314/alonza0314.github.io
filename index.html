@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/topbar.css">
     <link rel="stylesheet" href="css/bottombar.css">
     <link rel="stylesheet" href="css/index.css">
+
+    <script src="./js/topbar.js"></script>
+    <script src="./js/bottombar.js"></script>
 </head>
 <body>
     <div class="topbar">
@@ -19,13 +22,13 @@
             <a href="https://alonza0314.github.io">首頁</a>
             <a href="https://alonza0314.github.io/about.html">關於我</a>
             <a href="#">聯絡資訊</a>
-            <a href="#" onclick=changeLanguage()>ZH / EN</a>
+            <a href="#" onclick="topbarLanguage(); bottombarLanguage();">ZH / EN</a>
         </div>
         <div class="link-en" id="link-en">
             <a href="https://alonza0314.github.io">HOMEPAGE</a>
             <a href="https://alonza0314.github.io/about.html">ABOUT</a>
             <a href="#">CONTACT</a>
-            <a href="#" onclick=changeLanguage()>ZH / EN</a>
+            <a href="#" onclick="topbarLanguage(); bottombarLanguage();">ZH / EN</a>
         </div>
     </div>
     <div class="main">
@@ -61,7 +64,7 @@
             </a>
         </div>
         <footer class="bottombar">
-            <div class="refe">
+            <div class="refe" id="refe">
                 <p class="reference">• 網頁圖標來源：
                     <a class="reference-link" href="https://stickers.cloud/en/pack/%E5%92%96%E6%B3%A2-%E8%A1%A8%E6%83%85" target="_blank">Stickers Cloud</a>
                 </p>
@@ -69,6 +72,17 @@
                     <a class="reference-link" href="https://alonza0314.github.io" target="_blank">本人</a>
                 </p>
                 <p class="reference">• 參考資料來源：
+                    <a class="reference-link" href="https://uiverse.io/" target="_blank">UI VERSE</a>
+                </p>
+            </div>
+            <div class="refe-en" id="refe-en">
+                <p class="reference">• FAVICON：
+                    <a class="reference-link" href="https://stickers.cloud/en/pack/%E5%92%96%E6%B3%A2-%E8%A1%A8%E6%83%85" target="_blank">Stickers Cloud</a>
+                </p>
+                <p class="reference">• SELFI：
+                    <a class="reference-link" href="https://alonza0314.github.io" target="_blank">Myself</a>
+                </p>
+                <p class="reference">• REFERENCE DATA：
                     <a class="reference-link" href="https://uiverse.io/" target="_blank">UI VERSE</a>
                 </p>
             </div>
@@ -93,7 +107,6 @@
                 </li>
             </ul>
         </footer>
-        <script src="./js/topbar.js"></script>
     </div>
 </body>
 </html>

@@ -10,28 +10,34 @@
     gap: 3%;
 }
 
-.bottombar .refe {
+.refe {
     /* background-color: #4b92fc; */
     display: flex;
     flex-direction: row;
     gap: 5%;
     width: 90vh;
 }
+.refe-en {
+    display: none;
+    flex-direction: row;
+    gap: 5%;
+    width: 90vh;
+}
 
-.bottombar .refe .reference {
+.reference {
     color: #011a3f;
     font-weight: 500;
 }
 
-.bottombar .refe .reference-link {
+.reference-link {
     color: rgba(255, 255, 255, 0.653);
 }
 
-.bottombar .refe .reference-link:hover {
+.reference-link:hover {
     color: #032353;
 }
 
-.bottombar .icons {
+.icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,12 +45,12 @@
     list-style: none;
 }
 
-.bottombar .icons .icon-content {
+.icon-content {
     margin: 0 5%;
     position: relative;
 }
 
-.bottombar .icons .icon-content .tooltip {
+.tooltip {
     position: absolute;
     top: -30px;
     left: 50%;
@@ -58,13 +64,13 @@
     transition: all 0.3s ease;
 }
 
-.bottombar .icons .icon-content:hover .tooltip {
+.icon-content:hover .tooltip {
     opacity: 1;
     visibility: visible;
     top: -50px;
 }
 
-.bottombar .icons .icon-content a {
+.icon-content a {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -78,22 +84,22 @@
     transition: all 0.3s ease-in-out;
 }
 
-.bottombar .icons .icon-content a:hover {
+.icon-content a:hover {
     box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
 }
 
-.bottombar .icons .icon-content a svg {
+.icon-content a svg {
     position: relative;
     z-index: 1;
     width: 24px;
     height: 24px;
 }
 
-.bottombar .icons .icon-content a:hover {
+.icon-content a:hover {
     color: white;
 }
 
-.bottombar .icons .icon-content a .filled {
+.filled {
     position: absolute;
     top: auto;
     bottom: 0;
@@ -130,8 +136,10 @@
     .bottombar {
         gap: 5%;
         height: auto;
+        padding-bottom: 1%;
     }
-    .bottombar .refe {
+
+    .refe {
         /* background-color: #0274b3; */
         min-width: 50vw;
         width: auto;
@@ -142,17 +150,31 @@
         margin-left: -2%;
         padding-left: 5%;
     }
-    .bottombar .refe .reference {
+    .refe-en {
+        /* background-color: #0274b3; */
+        min-width: 50vw;
+        width: auto;
+        display: none;
+        flex-direction: column;
+        margin-top: -2%;
+        margin-right: 0%;
+        margin-left: -2%;
+        padding-left: 5%;
+    }
+
+    .reference {
         margin: 0%;
         margin-left: -5%;
     }
-    .bottombar .icons {
+
+    .icons {
         /* background-color: #0274b3; */
         flex-direction: column;
         margin-left: -8%;
         gap: 3%;
     }
-    .bottombar .icons .icon-content {
+
+    .icon-content {
         margin: 5% 5%;
     }
 }
