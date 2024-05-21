@@ -67,11 +67,20 @@ body, html {
         padding: 10px;
         text-align: center;
     }
+
+    .link {
+        margin-right: 2%;
+    }
+    .link-en {
+        gap: 10%;
+        margin-right: 2%;
+        margin-bottom: 0.8%;
+        display: none;
+    }
     
     .topbar a {
         color: white;
         text-decoration: none;
-        margin: 0 10px;
     }
 
     .extra-text {
