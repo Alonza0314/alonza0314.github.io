@@ -22,3 +22,22 @@ If you think its a not bad template, be free to use it! But please to make a ref
 + Large version: complete webpages and a comprehensive visual disign
 + Medium version: a complete page
 + Small version: a page with some improved
+
+## Architechture
+
+```mermaid
+graph LR;
+    A[homepage] --> B{topbar};
+    A --> C{card};
+    A --> D{bottombar};
+
+    B --> BA[about];
+    B --> BB[contact];
+
+    C --> CA[educational background];
+    C --> CB[achievements];
+    C --> CC[project portfolio];
+
+    D --> DA[github--embeded]
+    D --> DB[instagram--embeded]
+```
