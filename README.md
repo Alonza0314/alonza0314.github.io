@@ -20,7 +20,7 @@ If you think its a not bad template, be free to use it! But please to make a ref
 ## Versions Different
 
 + Large version: complete webpages and a comprehensive visual design
-+ Medium version: a complete page
++ Medium version: a new page
 + Small version: a page with some improved
 
 ## Architechture
