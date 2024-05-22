@@ -89,13 +89,13 @@
 .current {
     display: flex;
     flex-direction: row;
-    padding-left: 10%;
+    padding: 0 10%;
     line-height: 4vh;
 }
 .current-en {
     display: none;
     flex-direction: row;
-    padding-left: 10%;
+    padding: 0 10%;
     line-height: 4vh;
 }
 
