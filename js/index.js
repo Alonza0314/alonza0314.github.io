@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         topbarLanguage();
         bottombarLanguage();
-        indexLanguage();
+        Language();
     });
     
     languageSwitcherEN.addEventListener('click', function(event) {

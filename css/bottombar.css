@@ -4,10 +4,10 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 5%;
     background-color: #8aacf54c;
     height: auto;
     gap: 3%;
+    margin-top: auto;
 }
 
 .refe {
