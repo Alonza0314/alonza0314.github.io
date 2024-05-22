@@ -37,3 +37,11 @@
     width: 100%;
     border-radius: 10px;
 }
+
+.parted-line {
+    width: 60vw;
+    height: 5px;
+    background-color: rgb(2, 66, 114);
+    border-radius: 20px;
+    margin: 1% 0;
+}
