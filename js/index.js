@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         topbarLanguage();
         bottombarLanguage();
-        indexLanguage();
+        Language();
     });
 });
 
-function indexLanguage() {
+function Language() {
     var rc = document.getElementById("right-content");
     var rcen = document.getElementById("right-content-en");
     
