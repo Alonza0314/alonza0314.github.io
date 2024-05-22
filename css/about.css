@@ -17,27 +17,37 @@
     flex-direction: column;
     width: 80%;
     padding-left: 10%;
-    line-height: 1;
+    line-height: 4vh;
+    margin-top: 2vh;
 }
+.head-part-left-en {
+    display: none;
+    flex-direction: column;
+    width: 80%;
+    padding-left: 10%;
+    line-height: 4vh;
+    margin-top: 2vh;
+}
+
 
 .head-part-left-down {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-right: 30%;
+    padding-right: 20%;
+    gap: 20%;
 }
 
 .head-part-right {
     width: 20%;
     margin-left: auto;
     padding-right: 10%;
-    margin-top: 1%;
+    margin-top: 2vh;
 }
 
 .head-part-right img {
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
-
 }
 
 .parted-line {
@@ -46,4 +56,72 @@
     background-color: rgb(2, 66, 114);
     border-radius: 20px;
     margin: 1% 0;
+}
+
+.body-part {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+}
+.body-part-en {
+    display: none;
+    flex-direction: column;
+    width: 60vw;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10%;
+}
+
+.row h2 {
+    line-height: 4vh;
+}
+
+.tail-part {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin-bottom: 1%;
+}
+
+.current {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10%;
+    line-height: 4vh;
+}
+.current-en {
+    display: none;
+    flex-direction: row;
+    padding-left: 10%;
+    line-height: 4vh;
+}
+
+.subject {
+    width: auto;
+}
+
+.jobs {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    gap: 2vh;
+}
+
+.job {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.job h2 + h2 {
+    margin-top: 0vh;
+}
+
+
+@media only screen and (max-width: 820px) {
+
 }
