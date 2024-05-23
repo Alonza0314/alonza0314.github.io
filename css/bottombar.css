@@ -14,14 +14,16 @@
     /* background-color: #4b92fc; */
     display: flex;
     flex-direction: row;
-    gap: 5%;
-    width: 90vh;
+    gap: 3%;
+    width: 50vw;
+    font-size: 1.2vw;
 }
 .refe-en {
     display: none;
     flex-direction: row;
-    gap: 5%;
-    width: 90vh;
+    gap: 3%;
+    width: 50vw;
+    font-size: 1.2vw;
 }
 
 .reference {
