@@ -10,15 +10,21 @@ body, html {
     text-align: right;
     z-index: 1000;
     font-size: 15px;
+    height: 20px;
 }
 
 .link {
     margin-right: 2%;
+    /* height: 15px; */
 }
 .link-en {
     font-size: 17px;
     margin-right: 2%;
     display: none;
+}
+
+.link #languageSwitcherZH {
+    font-size: 17px;
 }
 
 .topbar a {
@@ -38,7 +44,6 @@ body, html {
     margin-left: 25px;
     font-weight: bold;
     font-size: 20px;
-    text-decoration: none;
 }
 
 .extra-text a:hover {
@@ -61,10 +66,13 @@ body, html {
         flex-direction: column;
         text-align: center;
         font-size: 16px;
+        height: unset;
     }
 
     .link {
         margin-right: 2%;
+        margin-bottom: 0.8%;
+        font-size: 14px;
     }
     .link-en {
         font-size: 16px;
@@ -72,6 +80,10 @@ body, html {
         margin-right: 2%;
         margin-bottom: 0.8%;
         display: none;
+    }
+
+    .link #languageSwitcherZH {
+        font-size: 16px;
     }
     
     .topbar a {
