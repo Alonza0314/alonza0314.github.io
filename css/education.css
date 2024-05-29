@@ -1,0 +1,166 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8vh 0;
+}
+
+.content > div + div {
+    margin-top: 0;
+}
+
+.stage {
+    /* background-color: rgba(240, 248, 255, 0.318); */
+    width: 70vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.time-box {
+    /* background-color: rgba(0, 0, 0, 0.099); */
+    position: relative;
+    width: 30%;
+    height: 100%;
+    border-right: 5px solid rgb(2, 66, 114);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    line-height: 0.1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(220, 240, 255);
+}
+
+.now {
+    display: block;
+}
+.now-en {
+    display: none;
+}
+
+.through {
+    display: inline-block;
+    transform: rotate(-90deg);
+    margin: 10px 0;
+}
+
+.dot {
+    position: absolute;
+    font-size: xxx-large;
+    right: -14px;
+    color: rgb(180, 217, 245);
+}
+
+
+.time-describe {
+    /* background-color: rgba(0, 0, 0, 0.195); */
+    position: relative;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.isia {
+    position: absolute;
+    width: 100%;
+}
+
+.isia img {
+    position: relative;
+    width: 60%;
+    margin-left: 15%;
+    border-radius: 20px;
+    bottom: 50%;
+    transition: transform 0.3s ease;
+}
+
+.isia img:hover {
+    transform: translateY(-15px);
+}
+
+.logol-isia {
+    display: inline;
+}
+.logol-isia-en {
+    display: none;
+}
+
+.cs {
+    position: absolute;
+    width: 100%;
+}
+
+.cs img {
+    position: relative;
+    width: 30%;
+    margin-left: 15%;
+    border-radius: 20px;
+    bottom: 50%;
+    transition: transform 0.3s ease;
+}
+
+.cs img:hover {
+    transform: translateY(-15px);
+}
+
+.cysh {
+    position: absolute;
+    width: 100%;
+}
+
+.cysh img {
+    position: relative;
+    width: 60%;
+    margin-left: 15%;
+    border-radius: 20px;
+    bottom: 50%;
+    transition: transform 0.3s ease;
+}
+
+.cysh img:hover {
+    transform: translateY(-15px);
+}
+
+.hkjh {
+    position: absolute;
+    width: 100%;
+}
+
+.hkjh img {
+    position: relative;
+    width: 30%;
+    margin-left: 15%;
+    border-radius: 20px;
+    bottom: 50%;
+    transition: transform 0.3s ease;
+}
+
+.hkjh img:hover {
+    transform: translateY(-15px);
+}
+
+.hkps {
+    position: absolute;
+    width: 100%;
+}
+
+.hkps img {
+    position: relative;
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 10px;
+    bottom: 50%;
+    transition: transform 0.3s ease;
+}
+
+.hkps img:hover {
+    transform: translateY(-15px);
+}

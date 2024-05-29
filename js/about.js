@@ -21,7 +21,6 @@ function Language() {
     var hpl = document.getElementById("head-part-left");
     var hplen = document.getElementById("head-part-left-en");
 
-    
     var bp = document.getElementById("body-part");
     var bpen = document.getElementById("body-part-en");
 
