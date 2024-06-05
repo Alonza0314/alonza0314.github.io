@@ -15,11 +15,28 @@
     margin: 10vh 0;
 }
 
+.container-en {
+    /* background-color: rgba(240, 248, 255, 0.663); */
+    display: none;
+    flex-direction: row;
+    height: auto;
+    width: 80%;
+    margin: 10vh 0;
+}
+
 .sidebar {
     /* background-color: rgba(250, 235, 215, 0.515); */
     height: auto;
     width: 20%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+.sidebar-en {
+    height: auto;
+    width: 20%;
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 3vh;
@@ -70,11 +87,12 @@
 }
 
 .pro-major-describe {
-    display: none;
+    display: block;
 }
 
+
 .social-describe {
-    display: block;
+    display: none;
 }
 
 .others-describe {

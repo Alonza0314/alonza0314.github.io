@@ -1,13 +1,13 @@
 function Language() {
-    var ci = document.getElementById("contact-info");
-    var cien = document.getElementById("contact-info-en");
-    
-    if (ci.style.display === "none") {
-        ci.style.display = "block";
-        cien.style.display = "none";
+    var c = document.getElementById("container");
+    var cen = document.getElementById("container-en");
+
+    if (c.style.display === "none") {
+        c.style.display = "flex";
+        cen.style.display = "none";
     } else {
-        ci.style.display = "none";
-        cien.style.display = "block";
+        c.style.display = "none";
+        cen.style.display = "flex";
     }
 }
 
@@ -16,9 +16,17 @@ document.addEventListener('DOMContentLoaded', function() {
     var social = document.getElementById("social");
     var others = document.getElementById("others");
 
+    var promajoren = document.getElementById("pro-major-en");
+    var socialen = document.getElementById("social-en");
+    var othersen = document.getElementById("others-en");
+
     var promajordescribe = document.getElementById("pro-major-describe");
     var socialdescribe = document.getElementById("social-describe");
     var othersdescribe = document.getElementById("others-describe");
+
+    var promajordescribeen = document.getElementById("pro-major-describe-en");
+    var socialdescribeen = document.getElementById("social-describe-en");
+    var othersdescribeen = document.getElementById("others-describe-en");
     
     promajor.addEventListener('click', function() {
         promajordescribe.style.display = "block";
@@ -35,5 +43,20 @@ document.addEventListener('DOMContentLoaded', function() {
         socialdescribe.style.display = "none";
         othersdescribe.style.display = "block";
     });
-});
 
+    promajoren.addEventListener('click', function() {
+        promajordescribeen.style.display = "block";
+        socialdescribeen.style.display = "none";
+        othersdescribeen.style.display = "none";
+    });
+    socialen.addEventListener('click', function() {
+        promajordescribeen.style.display = "none";
+        socialdescribeen.style.display = "block";
+        othersdescribeen.style.display = "none";
+    });
+    othersen.addEventListener('click', function() {
+        promajordescribeen.style.display = "none";
+        socialdescribeen.style.display = "none";
+        othersdescribeen.style.display = "block";
+    });
+});
