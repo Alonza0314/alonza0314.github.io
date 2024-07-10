@@ -16,11 +16,17 @@ function Language() {
         if (socialdescribeen.style.display !== "block" && othersdescribeen.style.display !== "block") {
             promajordescribeen.style.display = "none";
             promajordescribe.style.display = "block";
+            socialdescribe.style.display = "none";
+            othersdescribe.style.display = "none";
         } else if (promajordescribeen.style.display !== "block" && othersdescribeen.style.display !== "block") {
             socialdescribeen.style.display = "none";
+            promajordescribe.style.display = "none";
             socialdescribe.style.display = "block";
+            othersdescribe.style.display = "none";
         } else {
             othersdescribeen.style.display = "none";
+            promajordescribe.style.display = "none";
+            socialdescribe.style.display = "none";
             othersdescribe.style.display = "block";
         }
     } else {
@@ -29,11 +35,17 @@ function Language() {
         if (socialdescribe.style.display !== "block" && othersdescribe.style.display !== "block") {
             promajordescribe.style.display = "none";
             promajordescribeen.style.display = "block";
+            socialdescribeen.style.display = "none";
+            othersdescribeen.style.display = "none";
         } else if (promajordescribe.style.display !== "block" && othersdescribe.style.display !== "block") {
             socialdescribe.style.display = "none";
+            promajordescribeen.style.display = "none";
             socialdescribeen.style.display = "block";
+            othersdescribeen.style.display = "none";
         } else {
             othersdescribe.style.display = "none";
+            promajordescribeen.style.display = "none";
+            socialdescribeen.style.display = "none";
             othersdescribeen.style.display = "block";
         }
     }
