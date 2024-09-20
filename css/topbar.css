@@ -1,0 +1,116 @@
+:root {
+    --primary-color: #0a192f; /* 與背景相同的深藍色 */
+    --secondary-color: #64ffda; /* 亮青色，與網站主題色一致 */
+    --text-color: #ccd6f6; /* 淺灰藍色，提高可讀性 */
+    --hover-color: #64ffda; /* 懸停時的顏色 */
+}
+
+.topbar {
+    width: 100%;
+    background-color: rgba(10, 25, 47, 0.8); /* 半透明的背景，與主背景相似 */
+    backdrop-filter: blur(10px); /* 增加模糊效果 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 70px; /* 稍微增加高度 */
+    border-bottom: 2px solid var(--secondary-color); /* 添加底部邊框 */
+}
+
+.topbar-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+}
+
+.logo {
+    font-size: 28px; /* 增大字體 */
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    text-shadow: 0 0 10px var(--secondary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 18px; /* 增大字體 */
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    color: var(--hover-color);
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+body {
+    margin: 0; /* 移除默認的 body margin */
+    padding-top: 70px; /* 與 topbar 高度相同 */
+}
+
+.main-content {
+    padding-top: 0; /* 移除額外的頂部內邊距 */
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--secondary-color);
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(10, 25, 47, 0.95);
+        padding: 20px 0;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
