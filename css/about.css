@@ -1,39 +1,177 @@
 #about-me {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 800px; /* 減小最大寬度以使內容更集中 */
+    margin: 80px auto 0;
+    padding: 60px; /* 增加內邊距 */
+    background-color: #112240;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section {
+    display: flex;
+    justify-content: space-between; /* 改為 space-between 以增加文字和照片之間的距離 */
+    align-items: center;
+    margin-bottom: 50px;
+    position: relative;
+    padding: 30px;
+}
+
+.profile-info {
+    flex: 1;
+    padding-right: 60px; /* 增加右側內邊距,使文字與照片距離更遠 */
+    text-align: left; /* 確保文字左對齊 */
+}
+
+.profile-info p {
+    margin: 20px 0; /* 增加段落間距 */
+    font-size: 1.6em; /* 增大字體大小 */
+    color: #8892b0;
+    transition: color 0.3s ease;
+}
+
+.profile-info p:hover {
+    color: #64ffda;
+}
+
+.profile-info .inline-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-info .inline-info p {
+    margin-right: 20px;
+}
+
+.profile-image-container {
+    flex: 0 0 180px; /* 稍微增大照片容器 */
+    position: relative;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(100, 255, 218, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 20px rgba(100, 255, 218, 0.5);
+}
+
+.profile-image-container::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: 8px;
+    bottom: 8px;
+    border: 2px solid #64ffda;
+    border-radius: 8px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.profile-image-container:hover::before {
+    top: -12px;
+    left: -12px;
 }
 
 .section {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #eee;
+    margin-top: -10px; /* 保留這個置 */
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #233554;
 }
 
 .section:last-child {
     border-bottom: none;
 }
 
-.profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+/* 響應式設計 */
+@media (max-width: 768px) {
+    #about-me {
+        padding: 40px; /* 在小屏幕上稍微減少內邊距 */
+    }
+
+    .profile-section {
+        flex-direction: column-reverse;
+    }
+
+    .profile-info {
+        padding-right: 0;
+        padding-top: 40px; /* 增加頂部內邊距 */
+        text-align: center; /* 在小屏幕上文字居中 */
+    }
+
+    .profile-image-container {
+        flex: 0 0 160px; /* 在小屏幕上稍微減小照片 */
+        margin-bottom: 30px; /* 增加底部邊距 */
+    }
+
+    .profile-info .inline-info {
+        flex-direction: column;
+    }
+
+    .profile-info .inline-info p {
+        margin-right: 0;
+    }
+
+    .profile-info p {
+        font-size: 1.4em; /* 在中等屏幕上稍微減小字體 */
+    }
 }
 
-.section p {
-    margin: 10px 0;
-    text-align: center;
+@media (max-width: 480px) {
+    #about-me {
+        padding: 30px; /* 在最小屏幕上進一步減少內邊距 */
+    }
+
+    .profile-image-container {
+        flex: 0 0 140px;
+    }
+
+    .profile-info p {
+        font-size: 1.3em; /* 在最小屏幕上進一步減小字體 */
+    }
+}
+
+/* 新增教育部分樣式 */
+
+.education-section {
+    padding: 30px;
+}
+
+.education-section p {
+    font-size: 1.6em;
+    color: #8892b0;
+    margin: 15px 0;
+    transition: color 0.3s ease;
+}
+
+.education-section p:hover {
+    color: #64ffda;
 }
 
 /* 響應式設計 */
-@media (max-width: 600px) {
-    .profile-image {
-        width: 150px;
-        height: 150px;
+@media (max-width: 768px) {
+    .education-section h2 {
+        font-size: 1.6em;
+    }
+
+    .education-section p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-section h2 {
+        font-size: 1.4em;
+    }
+
+    .education-section p {
+        font-size: 1.1em;
     }
 }
