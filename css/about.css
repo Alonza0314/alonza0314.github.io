@@ -43,7 +43,7 @@
 }
 
 .profile-image-container {
-    flex: 0 0 180px; /* 稍微增大照片容器 */
+    flex: 0 0 160px; /* 減小桌面版的大小 */
     position: relative;
 }
 
@@ -107,8 +107,8 @@
     }
 
     .profile-image-container {
-        flex: 0 0 160px; /* 在小屏幕上稍微減小照片 */
-        margin-bottom: 30px; /* 增加底部邊距 */
+        flex: 0 0 140px; /* 在平板設備上進一步減小 */
+        margin-bottom: 25px;
     }
 
     .profile-info .inline-info {
@@ -130,7 +130,7 @@
     }
 
     .profile-image-container {
-        flex: 0 0 140px;
+        flex: 0 0 120px; /* 在手機設備上更小 */
     }
 
     .profile-info p {
