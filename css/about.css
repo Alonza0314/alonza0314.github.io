@@ -1,0 +1,39 @@
+#about-me {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section p {
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+}
