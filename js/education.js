@@ -1,6 +1,6 @@
 function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();
-    var threshold = 100; // 設置閾值，使元素在進入視口前就開始變化
+    var threshold = 200; // 增加閾值，使元素更早開始變化
     return (
         rect.top >= -threshold &&
         rect.left >= 0 &&
@@ -14,11 +14,11 @@ function handleScroll() {
     items.forEach(function(item, index) {
         var rect = item.getBoundingClientRect();
         var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-        var visiblePercentage = Math.min(Math.max((viewportHeight - rect.top) / viewportHeight, 0), 1);
+        var visiblePercentage = Math.min(Math.max((viewportHeight - rect.top) / (viewportHeight * 0.7), 0), 1);
 
         if (isElementInViewport(item)) {
-            item.style.opacity = visiblePercentage.toFixed(2);
-            item.style.transform = `translateY(${50 * (1 - visiblePercentage)}px)`;
+            item.style.opacity = (visiblePercentage * 0.7 + 0.3).toFixed(2); // 調整透明度範圍
+            item.style.transform = `translateY(${30 * (1 - visiblePercentage)}px)`; // 減少位移距離
         } else {
             // 確保第一個項目始終可見
             if (index === 0) {
@@ -26,7 +26,7 @@ function handleScroll() {
                 item.style.transform = 'translateY(0)';
             } else {
                 item.style.opacity = '0.3';
-                item.style.transform = 'translateY(50px)';
+                item.style.transform = 'translateY(30px)'; // 減少初始位移距離
             }
         }
     });
@@ -36,13 +36,13 @@ function handleScroll() {
 document.addEventListener('DOMContentLoaded', function() {
     var items = document.querySelectorAll('.timeline-item');
     items.forEach(function(item, index) {
-        item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        item.style.transition = 'opacity 0.2s ease, transform 0.2s ease'; // 縮短過渡時間
         if (index === 0) {
             item.style.opacity = '1';
             item.style.transform = 'translateY(0)';
         } else {
             item.style.opacity = '0.3';
-            item.style.transform = 'translateY(50px)';
+            item.style.transform = 'translateY(30px)'; // 減少初始位移距離
         }
     });
 
