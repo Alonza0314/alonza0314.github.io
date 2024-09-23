@@ -1,16 +1,21 @@
 // 這裡可以添加更多的交互效果
 document.addEventListener('DOMContentLoaded', function() {
     const description = document.querySelector('.personal-description');
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const topbar = document.querySelector('.topbar');
     
     function checkScroll() {
-        let descriptionPosition = description.getBoundingClientRect().top;
-        let descriptionBottom = description.getBoundingClientRect().bottom;
-        let screenPosition = window.innerHeight / 1.3; // 當元素進入視窗的 3/4 處時觸發
+        if (description) {
+            let descriptionPosition = description.getBoundingClientRect().top;
+            let descriptionBottom = description.getBoundingClientRect().bottom;
+            let screenPosition = window.innerHeight / 1.3;
 
-        if(descriptionPosition < screenPosition && descriptionBottom > 0) {
-            description.classList.add('visible');
-        } else {
-            description.classList.remove('visible');
+            if(descriptionPosition < screenPosition && descriptionBottom > 0) {
+                description.classList.add('visible');
+            } else {
+                description.classList.remove('visible');
+            }
         }
     }
 
@@ -27,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 添加滾動效果
-    const topbar = document.querySelector('.topbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             topbar.classList.add('scrolled');
@@ -36,17 +40,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 添加移動端菜單切換功能
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
     // 移動端菜單切換
-    const navToggle = document.querySelector('.nav-toggle');
-    navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        navToggle.classList.toggle('active');
-    });
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('is-active');
+            navToggle.classList.toggle('active');
+            console.log('Nav toggle clicked'); // 保留這行來幫助調試
+        });
+    }
+
+    // 其他現有的功能保持不變
+    // ...（保留其他現有的代碼）
+
+    console.log('DOMContentLoaded event fired'); // 添加這行來確認腳本已加載
 });
