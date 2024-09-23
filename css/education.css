@@ -173,33 +173,95 @@
 }
 
 @media (max-width: 768px) {
+    #education-timeline {
+        margin: 40px auto 0;
+        padding: 30px 10px;
+        max-width: 90%;
+    }
+
+    #education-timeline h1 {
+        font-size: 2.4em; /* 稍微增大 */
+        margin-bottom: 30px;
+    }
+
     .timeline::before {
-        left: 30px;
+        display: none;
     }
 
     .timeline-item {
-        padding-left: 60px;
+        width: 100%;
+        margin-bottom: 40px;
+        padding: 0;
     }
 
     .timeline-content {
         width: 100%;
+        margin: 0;
+        padding: 15px;
+        border-left: 4px solid #64ffda;
+        box-sizing: border-box;
+    }
+
+    .timeline-image {
+        width: 140px; /* 增加圖片寬度 */
+        height: 100px; /* 保持高度不變 */
+        object-fit: contain; /* 確保圖片不會被裁剪 */
+        float: right;
+        margin-left: 15px;
+        margin-bottom: 15px;
+    }
+
+    .timeline-content h2 {
+        font-size: 1.7em; /* 增大 */
+        margin-top: 0;
+        clear: left;
+    }
+
+    .timeline-content p {
+        font-size: 1.1em; /* 增大 */
+        margin: 5px 0;
+        clear: both;
+    }
+
+    .timeline-content .date {
+        font-size: 1em; /* 增大 */
+        margin-top: 10px;
+        display: block;
     }
 
     .timeline-dot {
-        left: 30px;
+        display: none;
     }
 }
 
 @media (max-width: 480px) {
     #education-timeline {
-        padding: 30px 15px;
+        padding: 20px 5px;
+        max-width: 95%;
     }
 
     #education-timeline h1 {
-        font-size: 2.2em;
+        font-size: 2em; /* 稍微增大 */
+    }
+
+    .timeline-content {
+        padding: 10px;
+    }
+
+    .timeline-image {
+        width: 130px; /* 在更小的屏幕上稍微減小寬度，但仍保持較寬 */
+        height: 90px; /* 保持之前的高度 */
     }
 
     .timeline-content h2 {
-        font-size: 1.6em;
+        font-size: 1.5em; /* 增大 */
+    }
+
+    .timeline-content p {
+        font-size: 1em; /* 增大 */
+    }
+
+    .timeline-content .date {
+        font-size: 0.9em; /* 增大 */
     }
 }
