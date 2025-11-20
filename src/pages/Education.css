@@ -83,10 +83,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-primary);
+  background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
   border-radius: var(--radius-lg);
   padding: 1rem;
   transition: all var(--transition-base);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .card-logo img {
@@ -97,7 +98,9 @@
 }
 
 .education-card:hover .card-logo {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(59, 130, 246, 0.1));
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(59, 130, 246, 0.25));
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: scale(1.05);
 }
 
 .education-card:hover .card-logo img {
