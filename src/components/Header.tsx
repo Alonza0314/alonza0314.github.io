@@ -33,7 +33,7 @@ const Header = () => {
 
           <div className="external-links">
             <a
-              href="https://alonza0314.github.io/free-ran-ue/"
+              href="https://free-ran-ue.github.io"
               target="_blank"
               rel="noopener noreferrer"
               className="external-link"
