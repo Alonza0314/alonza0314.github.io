@@ -1,15 +1,18 @@
+import { useLanguage } from '../contexts/LanguageContext'
 import './About.css'
 
 const About = () => {
+  const { t } = useLanguage()
+  
   return (
     <div className="about-page page-container">
-      <h1 className="page-title">關於我</h1>
+      <h1 className="page-title">{t('about.title')}</h1>
       
       <div className="cv-container">
         <div className="cv-viewer">
           <iframe
             src="/CV_General.pdf"
-            title="履歷"
+            title={t('about.resume')}
             className="pdf-iframe"
           />
         </div>
@@ -34,7 +37,7 @@ const About = () => {
               <polyline points="7 10 12 15 17 10"></polyline>
               <line x1="12" y1="15" x2="12" y2="3"></line>
             </svg>
-            下載 CV
+            {t('about.download')}
           </a>
           
           <a
@@ -57,7 +60,7 @@ const About = () => {
               <polyline points="15 3 21 3 21 9"></polyline>
               <line x1="10" y1="14" x2="21" y2="3"></line>
             </svg>
-            新分頁開啟
+            {t('about.openTab')}
           </a>
         </div>
       </div>

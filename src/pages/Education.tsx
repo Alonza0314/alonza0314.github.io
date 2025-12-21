@@ -1,61 +1,64 @@
+import { useLanguage } from '../contexts/LanguageContext'
 import './Education.css'
 
 interface EducationItem {
   id: string
   logo: string
-  school: string
-  department: string
-  period: string
+  schoolKey: string
+  departmentKey: string
+  periodKey: string
   logoAlt: string
 }
 
 const Education = () => {
+  const { t } = useLanguage()
+  
   const educationData: EducationItem[] = [
     {
       id: 'graduate',
       logo: '/img/school/logo_isia.png',
-      school: '國立陽明交通大學產學創新研究學院',
-      department: '智能系統研究所',
-      period: '2024 - 至今',
+      schoolKey: 'education.school.isia',
+      departmentKey: 'education.dept.isia',
+      periodKey: 'education.period.isia',
       logoAlt: 'ISIA Logo',
     },
     {
       id: 'university',
       logo: '/img/school/cs.png',
-      school: '國立陽明交通大學',
-      department: '資訊工程學系',
-      period: '2020 - 2024',
+      schoolKey: 'education.school.cs',
+      departmentKey: 'education.dept.cs',
+      periodKey: 'education.period.cs',
       logoAlt: 'CS Logo',
     },
     {
       id: 'high-school',
       logo: '/img/school/cysh.png',
-      school: '國立嘉義高級中學',
-      department: '',
-      period: '2017 - 2020',
+      schoolKey: 'education.school.cysh',
+      departmentKey: '',
+      periodKey: 'education.period.cysh',
       logoAlt: 'CYSH Logo',
     },
     {
       id: 'junior-high',
       logo: '/img/school/hkjh.jpg',
-      school: '嘉義縣立新港國民中學',
-      department: '',
-      period: '2013 - 2016',
+      schoolKey: 'education.school.hkjh',
+      departmentKey: '',
+      periodKey: 'education.period.hkjh',
       logoAlt: 'HKJH Logo',
     },
     {
       id: 'elementary',
       logo: '/img/school/hkps.png',
-      school: '嘉義縣新港鄉新港國民小學',
-      department: '',
-      period: '2007 - 2013',
+      schoolKey: 'education.school.hkps',
+      departmentKey: '',
+      periodKey: 'education.period.hkps',
       logoAlt: 'HKPS Logo',
     },
   ]
 
   return (
     <div className="education-page page-container">
-      <h1 className="page-title">求學經歷</h1>
+      <h1 className="page-title">{t('education.title')}</h1>
 
       <div className="timeline">
         {educationData.map((item, index) => (
@@ -75,9 +78,9 @@ const Education = () => {
                 </div>
 
                 <div className="card-info">
-                  <h3 className="school-name">{item.school}</h3>
-                  {item.department && (
-                    <p className="department">{item.department}</p>
+                  <h3 className="school-name">{t(item.schoolKey)}</h3>
+                  {item.departmentKey && (
+                    <p className="department">{t(item.departmentKey)}</p>
                   )}
                   <p className="period">
                     <svg
@@ -95,7 +98,7 @@ const Education = () => {
                       <line x1="8" y1="2" x2="8" y2="6"></line>
                       <line x1="3" y1="10" x2="21" y2="10"></line>
                     </svg>
-                    {item.period}
+                    {t(item.periodKey)}
                   </p>
                 </div>
               </div>

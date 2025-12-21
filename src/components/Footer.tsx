@@ -1,13 +1,15 @@
+import { useLanguage } from '../contexts/LanguageContext'
 import './Footer.css'
 
 const Footer = () => {
+  const { t } = useLanguage()
   const currentYear = new Date().getFullYear()
 
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3 className="footer-title">聯絡方式</h3>
+          <h3 className="footer-title">{t('footer.contact')}</h3>
           <div className="footer-content">
             <a href="mailto:alonza.tu@gmail.com" className="footer-link">
               <span className="icon">✉️</span>
@@ -21,7 +23,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-section">
-          <h3 className="footer-title">社交帳號</h3>
+          <h3 className="footer-title">{t('footer.social')}</h3>
           <div className="footer-content social-links">
             <a
               href="https://www.facebook.com/profile.php?id=100005221907361&mibextid=LQQJ4d"

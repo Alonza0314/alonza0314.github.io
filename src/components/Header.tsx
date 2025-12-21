@@ -1,8 +1,10 @@
 import { Link, useLocation } from 'react-router-dom'
+import { useLanguage } from '../contexts/LanguageContext'
 import './Header.css'
 
 const Header = () => {
   const location = useLocation()
+  const { language, toggleLanguage, t } = useLanguage()
 
   const isActive = (path: string) => {
     return location.pathname === path ? 'active' : ''
@@ -18,16 +20,16 @@ const Header = () => {
         <nav className="nav">
           <div className="nav-links">
             <Link to="/" className={`nav-link ${isActive('/')}`}>
-              首頁
+              {t('nav.home')}
             </Link>
             <Link to="/about" className={`nav-link ${isActive('/about')}`}>
-              關於我
+              {t('nav.about')}
             </Link>
             <Link to="/education" className={`nav-link ${isActive('/education')}`}>
-              求學經歷
+              {t('nav.education')}
             </Link>
             <Link to="/experience" className={`nav-link ${isActive('/experience')}`}>
-              特殊經歷
+              {t('nav.experience')}
             </Link>
           </div>
 
@@ -76,9 +78,13 @@ const Header = () => {
               </svg>
               Leetcode solutions
             </a>
-            {/* 語言切換按鈕（保留但未實現） */}
-            <button className="lang-switch" disabled title="即將推出">
-              EN
+            {/* 語言切換按鈕 */}
+            <button 
+              className="lang-switch" 
+              onClick={toggleLanguage}
+              title={language === 'zh' ? 'Switch to English' : '切換至中文'}
+            >
+              {language === 'zh' ? 'EN' : '中'}
             </button>
           </div>
         </nav>
