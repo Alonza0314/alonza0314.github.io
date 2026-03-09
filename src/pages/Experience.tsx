@@ -19,22 +19,23 @@ const Experience = () => {
         'experience.item.4',
         'experience.item.5',
         'experience.item.6',
+        'experience.item.7',
       ],
     },
     {
       titleKey: 'experience.club',
       itemKeys: [
-        'experience.item.7',
         'experience.item.8',
         'experience.item.9',
         'experience.item.10',
+        'experience.item.11',
       ],
     },
     {
       titleKey: 'experience.other',
       itemKeys: [
-        'experience.item.11',
         'experience.item.12',
+        'experience.item.13',
       ],
     },
   ]
