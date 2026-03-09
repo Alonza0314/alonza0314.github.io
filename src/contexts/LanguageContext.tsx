@@ -48,21 +48,21 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': '關於我',
     'nav.education': '求學經歷',
     'nav.experience': '特殊經歷',
-    
+
     // Home Page
     'home.greeting': '您好，我是',
     'home.name': '『杜峯 Alonza』',
-    'home.description': '一名熱愛技術的 5G 網路工程師，目前就讀於國立陽明交通大學智能系統研究所。專注於核心網路技術研究與開發，參與 free5GC 開源專案並自研 RAN/UE 開源模擬器專案 - free-ran-ue。熱衷於探索新技術，致力於將理論知識轉化為實際應用，推動 5G 網路技術的發展。',
+    'home.description': '一名熱愛技術的 5G 網路工程師，目前於 Saviah Technologies 擔任 5G 軟體工程師。專注於核心網路技術研究與開發，除了工作以外，同時參與 free5GC 開源專案並自研 RAN/UE 開源模擬器專案 - free-ran-ue。熱衷於探索新技術，致力於將理論知識轉化為實際應用，推動 5G 網路技術的發展。',
     'home.viewCV': '查看我的 CV',
     'home.github': '前往 GitHub',
     'home.skills': '專業技能',
-    
+
     // About Page
     'about.title': '關於我',
     'about.resume': '履歷',
     'about.download': '下載 CV',
     'about.openTab': '新分頁開啟',
-    
+
     // Education Page
     'education.title': '求學經歷',
     'education.school.isia': '國立陽明交通大學產學創新研究學院',
@@ -77,7 +77,7 @@ const translations: Record<Language, Record<string, string>> = {
     'education.period.hkjh': '2013 - 2016',
     'education.school.hkps': '嘉義縣新港鄉新港國民小學',
     'education.period.hkps': '2007 - 2013',
-    
+
     // Experience Page
     'experience.title': '特殊經歷',
     'experience.professional': '專業對口',
@@ -96,7 +96,7 @@ const translations: Record<Language, Record<string, string>> = {
     'experience.item.11': '國立陽明交通大學探索體驗營 - 13級總召',
     'experience.item.12': '國立陽明交通大學 女二學餐天晟燒臘 - 工讀生',
     'experience.item.13': '7-11 - 工讀生',
-    
+
     // Footer
     'footer.contact': '聯絡方式',
     'footer.social': '社交帳號',
@@ -107,21 +107,21 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'About',
     'nav.education': 'Education',
     'nav.experience': 'Experience',
-    
+
     // Home Page
     'home.greeting': 'Hello, I am',
     'home.name': 'Feng Tu (Alonza)',
-    'home.description': 'A passionate 5G Network Engineer currently pursuing a Master\'s degree at the Institute of Artificial Intelligence Innovation, National Yang Ming Chiao Tung University. Specializing in core network technology research and development, contributing to the free5GC open-source project and developing the RAN/UE open-source simulator project - free-ran-ue. Enthusiastic about exploring new technologies and committed to transforming theoretical knowledge into practical applications, advancing 5G network technology.',
+    'home.description': 'A passionate 5G Network Engineer currently working as a 5G Software Engineer at Saviah Technologies. Specializing in core network technology research and development, and alongside work, contributing to the free5GC open-source project and developing the RAN/UE open-source simulator project - free-ran-ue. Enthusiastic about exploring new technologies and committed to transforming theoretical knowledge into practical applications, advancing 5G network technology.',
     'home.viewCV': 'View My CV',
     'home.github': 'Visit GitHub',
     'home.skills': 'Professional Skills',
-    
+
     // About Page
     'about.title': 'About Me',
     'about.resume': 'Resume',
     'about.download': 'Download CV',
     'about.openTab': 'Open in New Tab',
-    
+
     // Education Page
     'education.title': 'Education',
     'education.school.isia': 'Industry Academia Innovation School, National Yang Ming Chiao Tung University',
@@ -136,7 +136,7 @@ const translations: Record<Language, Record<string, string>> = {
     'education.period.hkjh': '2013 - 2016',
     'education.school.hkps': 'Singang Elementary School, Chiayi County',
     'education.period.hkps': '2007 - 2013',
-    
+
     // Experience Page
     'experience.title': 'Experience',
     'experience.professional': 'Professional Experience',
@@ -155,7 +155,7 @@ const translations: Record<Language, Record<string, string>> = {
     'experience.item.11': 'National Yang Ming Chiao Tung University - Exploration Experience Camp - Director (Class of 13)',
     'experience.item.12': 'National Yang Ming Chiao Tung University - Tian Sheng Roasted Restaurant - Part-time Staff',
     'experience.item.13': '7-11 - Part-time Staff',
-    
+
     // Footer
     'footer.contact': 'Contact',
     'footer.social': 'Social Media',
