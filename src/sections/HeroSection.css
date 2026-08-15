@@ -152,6 +152,7 @@
   margin-bottom: var(--spacing-sm);
 }
 
+
 .hero-name-gradient {
   background: var(--gradient-brand);
   -webkit-background-clip: text;
