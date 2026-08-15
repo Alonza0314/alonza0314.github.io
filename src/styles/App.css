@@ -2,51 +2,163 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  isolation: isolate;
 }
 
 .main-content {
   flex: 1;
   width: 100%;
-  max-width: 1400px;
+  padding-top: var(--header-height);
+}
+
+/* ===== 共用區塊容器 ===== */
+.section {
+  position: relative;
+  padding: clamp(3.5rem, 8vw, 6rem) 1.5rem;
+  scroll-margin-top: var(--header-height);
+}
+
+.section-inner {
+  width: 100%;
+  max-width: var(--content-max-width);
   margin: 0 auto;
-  padding: 2rem 1.5rem;
-  animation: fadeIn 0.6s ease-out;
 }
 
-@media (max-width: 768px) {
-  .main-content {
-    padding: 1.5rem 1rem;
-  }
+.section-header {
+  margin-bottom: clamp(2rem, 5vw, 3rem);
 }
 
-/* 頁面容器通用樣式 */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  position: relative;
+}
+
+/*
+ * 區塊編號：獨立的徽章元件（有自己的底色 / 邊框 / 固定字級），
+ * 不用相對於標題字級縮放的極小比例文字，避免跟大標題的視覺量體差太多。
+ */
+.section-index {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--accent-blue);
+}
+
+/* 訊號強度格數 icon（四格漸高），純 CSS 多重背景堆疊 */
+.section-index::before {
+  content: '';
+  width: 1rem;
+  height: 0.8rem;
+  flex-shrink: 0;
+  background-image:
+    linear-gradient(var(--accent-cyan), var(--accent-cyan)),
+    linear-gradient(var(--accent-blue), var(--accent-blue)),
+    linear-gradient(var(--accent-blue), var(--accent-blue)),
+    linear-gradient(var(--accent-purple), var(--accent-purple));
+  background-repeat: no-repeat;
+  background-position: 0% 100%, 33% 100%, 66% 100%, 100% 100%;
+  background-size: 18% 35%, 18% 55%, 18% 78%, 18% 100%;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  width: 3.5rem;
+  height: 4px;
+  background: var(--gradient-brand);
+  border-radius: 2px;
+}
+
+/* 舊頁面容器樣式相容（沿用命名，供區塊內部沿用） */
 .page-container {
   animation: fadeIn 0.6s ease-out;
 }
 
-.page-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: var(--text-primary);
-  position: relative;
-  display: inline-block;
+/* ===== 滾動顯現（配合 useScrollReveal hook） ===== */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
-.page-title::after {
-  content: '';
-  position: absolute;
-  bottom: -0.5rem;
-  left: 0;
-  width: 60%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-  border-radius: 2px;
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== 玻璃擬態卡片 ===== */
+.glass-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-elevated);
+  transition: border-color var(--transition-base), transform var(--transition-base),
+    box-shadow var(--transition-base), background var(--transition-slow);
+}
+
+.glass-card:hover {
+  border-color: var(--border-glow);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated), 0 0 24px var(--glow-soft);
+}
+
+/* ===== 按鈕 ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    border-color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--gradient-brand);
+  color: #fff;
+  box-shadow: 0 8px 24px var(--glow-soft);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px var(--glow-soft);
+}
+
+.btn-secondary {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  border-color: var(--border-glow);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
-  .page-title {
-    font-size: 2rem;
+  .section {
+    padding: 3rem 1.25rem;
   }
 }
-
