@@ -32,31 +32,32 @@
 .section-title {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 1rem;
   font-size: clamp(1.9rem, 4vw, 2.5rem);
   font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
   position: relative;
 }
 
 /*
- * 區塊編號：獨立的徽章元件（有自己的底色 / 邊框 / 固定字級），
- * 不用相對於標題字級縮放的極小比例文字，避免跟大標題的視覺量體差太多。
+ * 區塊編號：改為描邊的「規格標籤」樣式（透明底、細邊框、低調字色），
+ * 不用實心底色的糖果色徽章，讓色彩只出現在小 icon 上，整體更克制、更有編輯感。
  */
 .section-index {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.5rem;
   flex-shrink: 0;
   padding: 0.4rem 0.75rem;
   border-radius: var(--radius-md);
-  background: var(--bg-elevated);
+  background: transparent;
   border: 1px solid var(--border-color);
   font-family: var(--font-mono);
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  color: var(--accent-blue);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
 }
 
 /* 訊號強度格數 icon（四格漸高），純 CSS 多重背景堆疊 */
@@ -94,8 +95,8 @@
 /* ===== 滾動顯現（配合 useScrollReveal hook） ===== */
 .reveal-section {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transform: translateY(28px);
+  transition: opacity 0.9s var(--ease-premium), transform 0.9s var(--ease-premium);
 }
 
 .reveal-section.is-visible {
@@ -105,20 +106,37 @@
 
 /* ===== 玻璃擬態卡片 ===== */
 .glass-card {
+  position: relative;
   background: var(--bg-elevated);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   box-shadow: var(--shadow-elevated);
-  transition: border-color var(--transition-base), transform var(--transition-base),
-    box-shadow var(--transition-base), background var(--transition-slow);
+  transition: border-color 0.5s var(--ease-premium), transform 0.5s var(--ease-premium),
+    box-shadow 0.5s var(--ease-premium), background var(--transition-slow);
+}
+
+/* 頂緣一道極細高光，模擬真實玻璃邊緣反光，是質感差異最明顯的細節 */
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 6%;
+  right: 6%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  pointer-events: none;
+}
+
+:root[data-theme='light'] .glass-card::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), transparent);
 }
 
 .glass-card:hover {
   border-color: var(--border-glow);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-elevated), 0 0 24px var(--glow-soft);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-elevated), 0 0 18px var(--glow-soft);
 }
 
 /* ===== 按鈕 ===== */
@@ -130,20 +148,21 @@
   border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 0.95rem;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
-    border-color var(--transition-fast), background var(--transition-fast);
+  letter-spacing: 0.01em;
+  transition: transform 0.4s var(--ease-premium), box-shadow 0.4s var(--ease-premium),
+    border-color 0.4s var(--ease-premium), background 0.4s var(--ease-premium);
   white-space: nowrap;
 }
 
 .btn-primary {
   background: var(--gradient-brand);
   color: #fff;
-  box-shadow: 0 8px 24px var(--glow-soft);
+  box-shadow: 0 10px 24px -8px var(--glow-soft);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px var(--glow-soft);
+  box-shadow: 0 16px 32px -8px var(--glow-soft);
 }
 
 .btn-secondary {
