@@ -1,0 +1,223 @@
+.education-section {
+  position: relative;
+}
+
+/* ===== 網路骨幹時間軸容器 ===== */
+.edu-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 2.75rem);
+}
+
+/* 中央（桌面）／左側（行動裝置）發光骨幹線 */
+.edu-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    var(--accent-cyan) 0%,
+    var(--accent-blue) 50%,
+    var(--accent-purple) 100%
+  );
+  box-shadow: 0 0 14px var(--glow-soft);
+  opacity: 0.85;
+  z-index: 0;
+}
+
+/* ===== 單一時間軸項目 ===== */
+.edu-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2.75rem 1fr;
+  align-items: start;
+  column-gap: clamp(1rem, 3vw, 2rem);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reveal-section.is-visible .edu-item {
+  animation: eduItemIn 0.6s ease-out forwards;
+  animation-delay: calc(var(--edu-index) * 0.12s);
+}
+
+@keyframes eduItemIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 交替左右分佈（zig-zag）－桌面版 */
+.edu-item:nth-child(odd) .edu-card {
+  grid-column: 1;
+  justify-self: end;
+}
+
+.edu-item:nth-child(even) .edu-card {
+  grid-column: 3;
+  justify-self: start;
+}
+
+/* ===== 基地台節點（脈衝標記） ===== */
+.edu-node {
+  position: relative;
+  grid-column: 2;
+  justify-self: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-top: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.edu-node-dot {
+  width: 1rem;
+  height: 1rem;
+  clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+  background: var(--gradient-brand);
+  filter: drop-shadow(0 0 8px var(--glow-soft));
+  transition: transform var(--transition-base), filter var(--transition-base);
+  z-index: 1;
+}
+
+.edu-node-ring {
+  position: absolute;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent-cyan);
+  opacity: 0;
+  animation: eduPulseRing 2.8s ease-out infinite;
+}
+
+.reveal-section.is-visible .edu-item .edu-node-ring {
+  animation-delay: calc(var(--edu-index) * 0.12s + 0.4s);
+}
+
+@keyframes eduPulseRing {
+  0% {
+    transform: scale(0.55);
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.edu-item:hover .edu-node-dot {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 14px var(--glow-soft));
+}
+
+/* ===== 卡片 ===== */
+.edu-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 26rem;
+  padding: 1.1rem 1.25rem;
+}
+
+.edu-card-logo {
+  flex-shrink: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-elevated-hover);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.edu-card-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.4rem;
+}
+
+.edu-card-body {
+  min-width: 0;
+}
+
+.edu-card-school {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin-bottom: 0.25rem;
+}
+
+.edu-card-dept {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+}
+
+.edu-card-period {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-cyan);
+  letter-spacing: 0.02em;
+}
+
+/* ===== 行動裝置：收合為單側時間軸 ===== */
+@media (max-width: 768px) {
+  .edu-timeline::before {
+    left: 1.375rem;
+  }
+
+  .edu-item {
+    grid-template-columns: 2.75rem 1fr;
+    column-gap: 1rem;
+  }
+
+  .edu-item:nth-child(odd) .edu-card,
+  .edu-item:nth-child(even) .edu-card {
+    grid-column: 2;
+    justify-self: stretch;
+  }
+
+  .edu-node {
+    grid-column: 1;
+  }
+
+  .edu-card {
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .edu-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .edu-card-logo {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}

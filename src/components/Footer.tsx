@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact">
       <div className="footer-container">
         <div className="footer-section">
           <h3 className="footer-title">{t('footer.contact')}</h3>
@@ -59,7 +59,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://www.linkedin.com/in/feng-tu-b91405345/"
+              href="https://www.linkedin.com/in/feng-tu/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link linkedin"

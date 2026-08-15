@@ -1,0 +1,206 @@
+.experience-section {
+  position: relative;
+}
+
+/* ===== 版面：專業對口卡片全寬置頂，社團 / 其他並排於下 ===== */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  align-items: start;
+}
+
+.experience-card--0 {
+  grid-column: 1 / -1;
+}
+
+/* ===== 卡片本體 ===== */
+.experience-card {
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
+  opacity: 0;
+}
+
+.reveal-section.is-visible .experience-card {
+  animation: scaleIn 0.6s ease-out both;
+}
+
+.experience-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.experience-card-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.35rem;
+  height: 2.35rem;
+  padding: 0 0.3rem;
+  clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+  background: var(--gradient-brand);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  filter: drop-shadow(0 6px 14px var(--glow-soft));
+  flex-shrink: 0;
+}
+
+.experience-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
+}
+
+/* ===== 條列項目 ===== */
+.experience-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 專業對口項目較多，寬螢幕以雙欄呈現以平衡卡片高度 */
+.experience-card--0 .experience-list {
+  gap: 0.5rem;
+}
+
+@media (min-width: 760px) {
+  .experience-card--0 .experience-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 0.5rem 1rem;
+  }
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  opacity: 0;
+  transition: background var(--transition-fast), border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.reveal-section.is-visible .experience-item {
+  animation: slideInLeft 0.5s ease-out both;
+}
+
+.experience-item:hover {
+  background: var(--bg-elevated-hover);
+  border-color: var(--border-color);
+  transform: translateX(2px);
+}
+
+.experience-item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+  border-radius: 50%;
+  background: var(--bg-elevated-hover);
+  border: 1px solid var(--border-color);
+  color: var(--accent-blue);
+  transition: background var(--transition-fast), color var(--transition-fast),
+    box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.experience-item-icon svg {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.experience-item:hover .experience-item-icon {
+  background: var(--gradient-brand);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 0 14px var(--glow-soft);
+}
+
+.experience-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.experience-item-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.experience-item:hover .experience-item-text {
+  color: var(--text-primary);
+}
+
+/* ===== 小項（例如：課程助教群組內的個別課程） ===== */
+.experience-subitem-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-left: 0.15rem;
+  border-left: 2px solid var(--border-color);
+  margin-left: 0.1rem;
+}
+
+.experience-subitem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding-left: 0.6rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-tertiary);
+  transition: color var(--transition-fast);
+}
+
+.experience-subitem-dot {
+  width: 0.35rem;
+  height: 0.35rem;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  opacity: 0.7;
+}
+
+.experience-item:hover .experience-subitem {
+  color: var(--text-secondary);
+}
+
+/* ===== 響應式 ===== */
+@media (max-width: 860px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card--0 {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-card {
+    padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-md);
+  }
+
+  .experience-item-text {
+    font-size: 0.88rem;
+  }
+}
